@@ -146,41 +146,53 @@
 
     <hr>
     <table border="1">
+      <colgroup>
+        <col  > 
+        <col style="background-color: red;"> 
+        <col > 
+        <col> 
+      </colgroup>
       <thead>
         <td>编号</td>
-        <td bgcolor="red">品名</td>
+        <td >品名</td>
         <td>进价</td>
         <td>出价</td>
       </thead>
       <tr>
         <td>aaa</td>
-        <td bgcolor="red">bbb</td>
+        <td >bbb</td>
         <td rowspan="2">合并</td>
         <td>ddd</td>
       </tr>
       <tr>
         <td>aaa</td>
-        <td bgcolor="red">bbb</td>
+        <td >bbb</td>
         <td>ddd</td>
       </tr>
       <tr>
         <td>aaa</td>
-        <td bgcolor="red">bbb</td>
+        <td >bbb</td>
         <td>ccc</td>
         <td>ddd</td>
       </tr>
       <tr>
         <td>aaa</td>
-        <td bgcolor="red">bbb</td>
+        <td >bbb</td>
         <td>ccc</td>
         <td>ddd</td>
       </tr>
     </table>
     <hr>
+    <img  usemap="#themap"  width="500px" height="500px" src="https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00617-3201.jpg" alt="兵马俑">
+    <map name="themap">
+      <area shape="circle" title="To mi.com"  coords="100 100 100" href="https://www.mi.com" alt="小米">
+      <area shape="rect" title="To mi.com"  coords="250,300,450,0 " href="https://www.jd.com" alt="京东">
+    </map>
     <hr>
+    <!-- 貌似 a标签的target属性只能指定 目标的name属性 -->
     <a href="https://devdocs.io/" target="frame1">前端文档</a>
     <br>
-    <iframe src="https://www.kotlincn.net/" name="frame1" frameborder="1"></iframe>
+    <iframe src="https://www.kotlincn.net/" id="fr1"name="frame1" frameborder="1"></iframe>
     <br>
     <br>
     <pre>
