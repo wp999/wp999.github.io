@@ -55,14 +55,85 @@
       width: 100%;
       overflow: auto;
     }
+    .root>li{
+      font-size: 16px;
+      display: inline-block;
+      height: 20px;
+      width: 100px;
+      margin: 15px 0 0 15px;
+      background-color: orange;
+      border: 1px solid black;
+      text-align: center;
+      line-height: 16px;
+      vertical-align: top;
+    }
+    .root>li li{
+      margin-top: 5px;
+      line-height: 16px;
+      height: 20px;
+      width: 100px;
+      font-size: 16px;
+    }
+    li{
+      background-color: orange;
+    }
+    li:hover{
+      background-color: pink;
+      user-select: none;
+    }
+    .root>li:hover ul{
+      visibility: visible;
+    }
+    ul{
+      list-style: none;
+      margin-left:-40px ;
+    }
+    ul ul{
+      visibility: hidden;
+    }
   </style>
 </head>
 <body>
   <div class="search">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, tempore quibusdam nostrum quod, quo, saepe nesciunt excepturi incidunt repellendus tenetur natus id reiciendis eos dolores facilis! Voluptates, laborum? Quia, aspernatur.</div>
   <div class="main">
     <header>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum exercitationem eaque voluptates minima, doloribus saepe nostrum inventore libero distinctio facere quod assumenda deleniti officiis sit animi explicabo suscipit minus voluptatibus?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati impedit aliquam ducimus nisi, non ab enim molestiae dolor asperiores pariatur sequi quas facere sed! Odit quasi explicabo temporibus iure.
+  <ul class="root">
+    <li>
+
+      phone
+      <ul>
+        <li>iphone</li>
+        <li>Xiaomi</li>
+        <li>SAMSUNG</li>
+      </ul>
+    </li>
+    <li>
+
+    laptop
+      <ul>
+        <li>Lenove</li>
+        <li>Dell</li>
+        <li>Macbook</li>
+      </ul>
+    </li>
+    <li>
+keyboard
+      <ul>
+        <li>Cheery</li>
+        <li>IKBC</li>
+        <li>Logitech</li>
+      </ul>
+    </li>
+    <li>
+smartwatch
+      <ul>
+        <li>Xiaomi</li>
+        <li>iwatch 6</li>
+        <li>little genius</li>
+      </ul>
+    </li>
+
+  </ul>
     </header>
     <section>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quos molestiae iure, corporis veritatis rerum vero optio sint minus vitae laborum doloribus sequi distinctio alias consequatur nostrum odit esse! Repellat.
