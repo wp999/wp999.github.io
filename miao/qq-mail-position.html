@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      min-width: 800px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+    div{
+      position: absolute;
+    }
+    header,main,aside{
+      position: absolute;
+    }
+    header{
+      height: 100px;
+      overflow: auto;
+      width: 100%;
+      top: 0;
+      left: 0;
+      border-bottom: 2px solid black;
+    }
+    .logo{
+      font-size: 35px; 
+      width: 150px;
+      line-height: 100px;
+      height: 100%;
+      left: 50px;
+    }
+    .userinfo{
+      width: 200px;
+      top: 35px;
+      left: 220px;
+
+    }
+    .header-nav{
+      right: 20px;
+      top: 20px;
+
+    }
+    .search-box{
+      right: 20px;
+      top: 60px;
+
+    }
+    aside{
+      height: calc(100vh - 100px);
+      width: 200px;
+      top: 100px;
+      border-right: 2px solid black;
+      overflow: auto;
+    }
+    aside>div{
+      width: 30%;
+      text-align: center;
+      top: 20px;
+      left: 70px;
+    }
+    main{
+      height: calc(100vh - 100px);
+      width: calc(100% - 200px);
+      left: 200px;
+      top: 100px;
+      overflow: auto;
+    }
+    .overview{
+      top: 30px;
+      left: 50px;
+
+    }
+    .recommend{
+      padding: 10px;
+      border: 1px solid black;
+      left: 50px;
+      top: 100px;
+      width: 800px;
+      height: 250px;
+      line-height: 30px;
+    }
+  </style>
+
+</head>
+<body>
+<header>
+<div class="logo">QQ Mail
+</div>
+<div class="userinfo">
+  225242342231@qq.com  | 邮箱首页 | Settings | Skins
+</div>
+<div class="header-nav">反馈建议 | 帮助中心 | 退出</div>
+<div class="search-box"><input type="search" name="" placeholder="邮件搜索.." id=""></div>
+</header>    
+<main>
+  <div class="overview">
+    <strong>下午好</strong>  , 2526463463.
+    <br>
+    <a href="#">11,未读邮件</a>
+  </div>
+  <div class="recommend">
+    邮箱推荐
+    <hr>
+ <a href="">iPhone版</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="">明信片 - 贺卡</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="">iPad版</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<a href="">记事本 - 日历</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="">Android版</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="">文件中转站</a>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+</main>
+<aside>
+<div>
+  <strong>写信</strong><br><strong>收信</strong><br><strong>通讯录</strong><br>
+  <hr>
+  <a href="#">收件箱(10)</a><br><a href="#">草稿箱</a><br><a href="#">已发送</a><br><a href="#">已删除</a><br><a href="#">垃圾箱</a>
+</div>
+</aside>
+</body>
+</html>
