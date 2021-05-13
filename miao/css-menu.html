@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .rela {
+        position: relative;
+      }
+      .abs {
+        position: absolute;
+      }
+      body {
+        padding: 20px 20px;
+        font-size: 0;
+      }
+      .nav-bar {
+        height: 40px;
+        width: 800px;
+        background-color: orange;
+      }
+      .option {
+        text-align: center;
+        font-size: 14px;
+        box-sizing: border-box;
+        width: 100px;
+        height: 100%;
+        line-height: 40px;
+        float: left;
+      }
+      ul {
+        width: 100px;
+        visibility: hidden;
+        /* transition: 1s; */
+      }
+      li {
+        display: inline-block;
+        width: 100%;
+      }
+      li:hover {
+        background-color: lightseagreen;
+      }
+      .c-items {
+        left: 100px;
+        top: 0px;
+      }
+      .option:hover > .items {
+        /* display: block; */
+        visibility: visible;
+      }
+      .items > li:hover > ul {
+        /* display: block; */
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <div class="option">
+        手机
+        <ul class="items abs">
+          <li class="rela">
+            Xiaomi
+            <ul class="c-items items abs">
+              <li>Redme</li>
+              <li class="rela">
+                Mi
+                <ul class="c-items items abs">
+                  <li>Mi 9</li>
+                  <li>Mi 10</li>
+                  <li class="rela">
+                    Mi 11
+                    <ul class="c-items items abs">
+                      <li>Mi 9 Pro</li>
+                      <li>Mi 9 SE</li>
+                      <li>Mi 9 青春版</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Mix</li>
+            </ul>
+          </li>
+          <li class="rela">
+            SAMSUNG
+            <ul class="c-items abs">
+              <li>Glaxy 19</li>
+              <li>Glaxy 20</li>
+              <li>Glaxy 21</li>
+              <li>Glaxy 22</li>
+            </ul>
+          </li>
+          <li class="rela">
+            iPhone
+            <ul class="c-items abs">
+              <li>iPhone 8 Plus</li>
+              <li>iPhone XR</li>
+              <li>iPhone 11</li>
+              <li>iPhone 12</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="option">笔记本</div>
+      <div class="option">配件</div>
+      <div class="option">无人机</div>
+      <div class="option">游戏</div>
+      <div class="option">乌仁吉</div>
+      <div class="option">生活</div>
+      <div class="option">其他</div>
+    </div>
+    <div
+      style="
+        height: 300px;
+        margin-top: 200px;
+        background-image: url(./pics/uTools_1620896179657.png);
+        background-repeat: no-repeat;
+      "
+    ></div>
+  </body>
+</html>
