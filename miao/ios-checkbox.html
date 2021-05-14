@@ -24,8 +24,9 @@
         width: 100%;
         background-color: white;
         border-radius: 80px;
-        transition: transform 0.5s;
+        transition: transform 0.3s 0.2s;
       }
+      /* unchecked 状态的按钮 */
       .circle {
         position: absolute;
         top: 10px;
@@ -36,24 +37,30 @@
         height: 140px;
         width: 140px;
         border-radius: 50%;
-        box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, 0.2);
-        transition: all 0.5s, padding-right 0.5s 0.2s, padding-left 0.5s;
+        box-shadow: -2px -2px 8px rgb(160, 160, 160),
+          -2px -2px 12px rgba(255, 255, 255, 0.5),
+          inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+          2px 2px 8px rgba(0, 0, 0, 0.15);
+        transition: margin 0.4s, width 0.4s, padding-left 0.5s 0.22s,
+          padding-right 0.4s;
       }
+      /* checked 状态的按钮 */
       input:checked + label > .circle {
         margin-left: 120px;
-        padding-left: 30px;
-        padding-right: 30px;
-        width: 80px;
-        transition: all 0.5s 0.111s, padding-right 0.5s, padding-left 0.5s 0.2s;
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 60px;
+        transition: margin 0.4s 0.22s, width 0.4s 0.22s, padding-right 0.5s,
+          padding-left 0.4s 0.22s;
       }
       input:checked + label > .bg {
-        transition: transform 0.5s 0.2s;
+        transition: transform 0.5s 0.22s;
         transform: scale(0, 0);
       }
     </style>
   </head>
   <body>
-    <h1>第三版</h1>
+    <h1>顶不住了</h1>
     <hr />
     <input type="checkbox" name="" id="sw" />
     <label for="sw">
