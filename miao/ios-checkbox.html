@@ -6,62 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      input {
+        /* display: none; */
+      }
       label {
-        z-index: 1;
         display: block;
-        height: 155px;
-        width: 270px;
-        border-radius: 80px;
-        border: 2px solid grey;
-        display: flex;
-        align-items: center;
-        color: white;
-        transition: 0.3s;
-        background-color: #30f34b;
+        border: 3px solid grey;
+        height: 160px;
+        width: 280px;
+        border-radius: 85px;
         position: relative;
-        box-shadow: 2px 2px 2px grey;
+        background-color: #30f34b;
+        overflow: hidden;
+      }
+      .bg {
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        border-radius: 80px;
+        transition: transform 0.5s;
       }
       .circle {
-        transition: margin 0.5s 0.1s, padding 0.5s;
-        background-color: white;
-        margin-left: 10px;
-        height: 135px;
-        width: 135px;
-        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0, 0.3);
-        border-radius: 50%;
-      }
-      main {
-        z-index: -1;
-        transition: 0.5s 0.1s;
         position: absolute;
-        top: -1px;
-        left: -2px;
+        top: 10px;
+        left: 10px;
+        right: 0;
         bottom: 0;
-        right: -2px;
-        margin: auto;
-        height: 100%;
-        width: 101%;
-        /* border: 1px solid rgb(0, 0, 0, 0.1); */
         background-color: white;
-        border-radius: 80px;
-      }
-      input:checked + label > main {
-        transition: transform 0.5s 0.1s;
-        transform: scale(0, 0);
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, 0.2);
+        transition: all 0.5s, padding-right 0.5s 0.2s, padding-left 0.5s;
       }
       input:checked + label > .circle {
-        transition: margin 0.5s 0.1s, padding 0.5s;
-        margin: 0 10px 0 125px;
-        padding: 2px 50px;
+        margin-left: 120px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 80px;
+        transition: all 0.5s 0.111s, padding-right 0.5s, padding-left 0.5s 0.2s;
+      }
+      input:checked + label > .bg {
+        transition: transform 0.5s 0.2s;
+        transform: scale(0, 0);
       }
     </style>
   </head>
   <body>
-    <h1>第二版</h1>
-    <input type="checkbox" style="display: none" name="" id="switch" />
-    <label for="switch">
+    <h1>第三版</h1>
+    <hr />
+    <input type="checkbox" name="" id="sw" />
+    <label for="sw">
+      <div class="bg"></div>
       <div class="circle"></div>
-      <main></main>
     </label>
   </body>
 </html>
