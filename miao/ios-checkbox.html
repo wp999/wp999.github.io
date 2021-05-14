@@ -10,14 +10,19 @@
         /* display: none; */
       }
       label {
+        transition: 0.5s 0.22s;
         display: block;
-        border: 3px solid grey;
+        /* border: 3px solid rgb(121, 121, 121); */
         height: 160px;
         width: 280px;
         border-radius: 85px;
         position: relative;
         background-color: #30f34b;
         overflow: hidden;
+        box-shadow: -2px -2px 8px rgb(160, 160, 160),
+          -2px -2px 12px rgba(255, 255, 255, 0.5),
+          inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+          2px 2px 8px rgba(0, 0, 0, 0.15);
       }
       .bg {
         height: 100%;
@@ -56,6 +61,10 @@
       input:checked + label > .bg {
         transition: transform 0.5s 0.22s;
         transform: scale(0, 0);
+      }
+      input:checked + label {
+        border-color: #30f34b;
+        transition: 0.5s 0.22s;
       }
     </style>
   </head>
