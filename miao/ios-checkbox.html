@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        z-index: 1;
+        display: block;
+        height: 155px;
+        width: 270px;
+        border-radius: 80px;
+        border: 2px solid grey;
+        display: flex;
+        align-items: center;
+        color: white;
+        transition: 0.3s;
+        background-color: #30f34b;
+        position: relative;
+        box-shadow: 2px 2px 2px grey;
+      }
+      .circle {
+        transition: margin 0.3s, padding 0.3s;
+        background-color: white;
+        margin-left: 10px;
+        height: 135px;
+        width: 135px;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0, 0.3);
+        border-radius: 50%;
+      }
+      main {
+        z-index: -1;
+        transition: 0.3s;
+        position: absolute;
+        top: -1px;
+        left: -2px;
+        bottom: 0;
+        right: -2px;
+        margin: auto;
+        height: 100%;
+        width: 101%;
+        /* border: 1px solid rgb(0, 0, 0, 0.1); */
+        background-color: white;
+        border-radius: 80px;
+      }
+      input:checked + label > main {
+        transition: transform 0.4s;
+        transform: scale(0, 0);
+      }
+      input:checked + label > .circle {
+        transition: margin 0.3s 0.1s, padding 0.3s;
+        margin: 0 10px 0 125px;
+        padding: 2px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" style="display: none" name="" id="switch" />
+    <label for="switch">
+      <div class="circle"></div>
+      <main></main>
+    </label>
+  </body>
+</html>
