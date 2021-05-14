@@ -7,121 +7,107 @@
     <title>Document</title>
     <style>
       * {
-        margin: 0;
         padding: 0;
-      }
-      .rela {
-        position: relative;
-      }
-      .abs {
-        position: absolute;
-      }
-      body {
-        padding: 20px 20px;
-        font-size: 0;
-      }
-      .nav-bar {
-        height: 40px;
-        width: 800px;
-        background-color: orange;
-      }
-      .option {
-        text-align: center;
-        font-size: 14px;
+        margin: 0;
         box-sizing: border-box;
-        width: 100px;
-        height: 100%;
-        line-height: 40px;
-        float: left;
+        font: 14px "微软雅黑";
       }
       ul {
-        width: 100px;
-        visibility: hidden;
-        /* transition: 1s; */
+        list-style: none;
+        box-shadow: 2px 2px 2px grey;
       }
       li {
-        display: inline-block;
-        width: 100%;
+        position: relative;
+        padding: 3px 8px;
       }
       li:hover {
-        background-color: lightseagreen;
+        background-color: rgb(0, 0, 0, 0.7);
       }
-      .c-items {
-        left: 100px;
-        top: 0px;
+      .menubar {
+        position: relative;
+        width: 100%;
+        min-width: 600px;
+        color: white;
+        user-select: none;
+        background: linear-gradient(to top, rgb(32, 32, 32), #3f3f3f);
+        box-shadow: 3px 3px 3px grey;
       }
-      .option:hover > .items {
-        /* display: block; */
+      .top-items > li {
+        display: inline-block;
+      }
+      .top-items > li:hover {
+        background-color: rgb(255, 255, 255, 0.2);
+      }
+      .v-items li {
+        background-color: #222222;
+        min-width: 240px;
+        visibility: hidden;
+        height: 0px;
+      }
+      .v-items li:hover {
+        background-color: rgb(0, 0, 0, 0.7);
+      }
+      .v-items {
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+      .l-items {
+        position: absolute;
+        top: 0;
+        left: 100%;
+      }
+      .v-items,
+      .v-items ul {
+        visibility: hidden;
+      }
+      li:hover > ul > li {
+        height: 24px;
         visibility: visible;
-      }
-      .items > li:hover > ul {
-        /* display: block; */
-        visibility: visible;
+        transition: height 0.3s ease, visibility 0.3s 0.1s;
       }
     </style>
   </head>
   <body>
-    <div class="nav-bar">
-      <div class="option">
-        手机
-        <ul class="items abs">
-          <li class="rela">
-            Xiaomi
-            <ul class="c-items items abs">
-              <li>Redme</li>
-              <li class="rela">
-                Mi
-                <ul class="c-items items abs">
-                  <li>Mi 9</li>
-                  <li>Mi 10</li>
-                  <li class="rela">
-                    Mi 11
-                    <ul class="c-items items abs">
-                      <li>Mi 9 Pro</li>
-                      <li>Mi 9 SE</li>
-                      <li>Mi 9 青春版</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>Mix</li>
-            </ul>
-          </li>
-          <li class="rela">
-            SAMSUNG
-            <ul class="c-items abs">
-              <li>Glaxy 19</li>
-              <li>Glaxy 20</li>
-              <li>Glaxy 21</li>
-              <li>Glaxy 22</li>
-            </ul>
-          </li>
-          <li class="rela">
-            iPhone
-            <ul class="c-items abs">
-              <li>iPhone 8 Plus</li>
-              <li>iPhone XR</li>
-              <li>iPhone 11</li>
-              <li>iPhone 12</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="option">笔记本</div>
-      <div class="option">配件</div>
-      <div class="option">无人机</div>
-      <div class="option">游戏</div>
-      <div class="option">乌仁吉</div>
-      <div class="option">生活</div>
-      <div class="option">其他</div>
+    <div class="menubar">
+      <!--  -->
+      <ul class="top-items">
+        <li>
+          文件(F)
+          <ul class="v-items">
+            <li>新建文件</li>
+            <li>新建文件夹</li>
+            <li>打开文件</li>
+            <li>
+              打开最近的文件
+              <ul class="l-items">
+                <li>C:/User/rainbow/inde.html</li>
+                <li>C:/User/rainbow/coding/test.html</li>
+                <li>C:/User/rainbow/download/fake.html</li>
+              </ul>
+            </li>
+            <li>保存</li>
+            <li>另存为</li>
+            <li>
+              首选项
+              <ul class="l-items">
+                <li>设置</li>
+                <li>联机服务设置</li>
+                <li>颜色主题</li>
+                <li>用户键盘映射</li>
+              </ul>
+            </li>
+            <li>退出</li>
+          </ul>
+        </li>
+        <li class="top-items">编辑(E)</li>
+        <li class="top-itmes">查看(V)</li>
+        <li class="top-itmes">转到(G)</li>
+        <li class="top-itmes">运行(R)</li>
+        <li class="top-itmes">终端(T)</li>
+        <li class="top-itmes">查看(V)</li>
+        <li class="top-itmes">帮助(H)</li>
+      </ul>
     </div>
-    <div
-      style="
-        height: 300px;
-        margin-top: 200px;
-        background-image: url(./pics/uTools_1620896179657.png);
-        background-repeat: no-repeat;
-      "
-    ></div>
   </body>
 </html>
