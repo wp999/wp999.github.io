@@ -7,6 +7,7 @@
     <title>Document</title>
     <style>
       label {
+        position: relative;
         transition: 0.5s 0.22s;
         display: block;
         height: 160px;
@@ -16,37 +17,81 @@
         border: 3px solid rgb(153, 153, 153);
       }
       input:not([checked]) + label > .circle {
+        position: absolute;
         background-color: white;
         height: 150px;
-        margin-top: 5px;
-        border-radius: 85px;
+        border-radius: 80px;
         box-shadow: 0px 0px 10px 3px rgb(0, 0, 0, 0.4);
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        min-width: 150px;
         /* 以下是渐变属性 */
-        margin-left: 5px;
-        margin-right: 115px;
-        width: 150px;
-        transition: width 0.5s, padding 0.6s 0.1s, margin 0.6s;
+        margin-left: 0px;
+        margin-right: 120px;
+        transition: margin-right 0.6s 0.1s, margin-left 0.6s;
       }
       input:checked + label > .circle {
-        width: 110px;
-        padding: 0 20px;
-        margin-left: 125px;
-        margin-right: 5px;
-        transition: 0.6s 0.1s, padding 0.6s;
+        margin-left: 120px;
+        margin-right: 0px;
+        transition: margin-right 0.6s, margin-left 0.6s 0.1s;
       }
       input:checked + label {
         border-color: #30f34b;
         box-shadow: inset 0px 0px 0px 80px #30f34b;
-        transition: 0.6s 0.05s;
+        transition: 0.5s 0.2s;
+      }
+      input {
+        display: none;
       }
     </style>
   </head>
   <body>
-    <hr />
     <input type="checkbox" name="" id="sw" />
     <label for="sw">
       <div class="bg"></div>
       <div class="circle"></div>
     </label>
+    <hr />
+    <pre>
+      <code>
+
+      label {
+        position: relative;
+        transition: 0.5s 0.22s;
+        display: block;
+        height: 160px;
+        width: 280px;
+        border-radius: 85px;
+        background-color: rgb(153, 153, 153);
+        border: 3px solid rgb(153, 153, 153);
+      }
+      input:not([checked]) + label > .circle {
+        position: absolute;
+        background-color: white;
+        height: 150px;
+        border-radius: 80px;
+        box-shadow: 0px 0px 10px 3px rgb(0, 0, 0, 0.4);
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        min-width: 150px;
+        /* 以下是渐变属性 */
+        margin-left: 0px;
+        margin-right: 120px;
+        transition: margin-right 0.6s 0.1s, margin-left 0.6s;
+      }
+      input:checked + label > .circle {
+        margin-left: 120px;
+        margin-right: 0px;
+        transition: margin-right 0.6s, margin-left 0.6s 0.1s;
+      }
+      input:checked + label {
+        border-color: #30f34b;
+        box-shadow: inset 0px 0px 0px 80px #30f34b;
+        transition: 0.5s 0.2s;
+      }
+      </code>
+    </pre>
   </body>
 </html>
