@@ -30,8 +30,10 @@
         margin-left: 0px;
         margin-right: 120px;
         transition: margin-right 0.6s 0.1s, margin-left 0.6s;
+        background: center no-repeat url(./pics/呲牙.jpg);
       }
       input:checked + label > .circle {
+        background: center no-repeat url(./pics/呲牙.jpg);
         margin-left: 120px;
         margin-right: 0px;
         transition: margin-right 0.6s, margin-left 0.6s 0.1s;
@@ -52,46 +54,5 @@
       <div class="bg"></div>
       <div class="circle"></div>
     </label>
-    <hr />
-    <pre>
-      <code>
-
-      label {
-        position: relative;
-        transition: 0.5s 0.22s;
-        display: block;
-        height: 160px;
-        width: 280px;
-        border-radius: 85px;
-        background-color: rgb(153, 153, 153);
-        border: 3px solid rgb(153, 153, 153);
-      }
-      input:not([checked]) + label > .circle {
-        position: absolute;
-        background-color: white;
-        height: 150px;
-        border-radius: 80px;
-        box-shadow: 0px 0px 10px 3px rgb(0, 0, 0, 0.4);
-        top: 5px;
-        left: 5px;
-        right: 5px;
-        min-width: 150px;
-        /* 以下是渐变属性 */
-        margin-left: 0px;
-        margin-right: 120px;
-        transition: margin-right 0.6s 0.1s, margin-left 0.6s;
-      }
-      input:checked + label > .circle {
-        margin-left: 120px;
-        margin-right: 0px;
-        transition: margin-right 0.6s, margin-left 0.6s 0.1s;
-      }
-      input:checked + label {
-        border-color: #30f34b;
-        box-shadow: inset 0px 0px 0px 80px #30f34b;
-        transition: 0.5s 0.2s;
-      }
-      </code>
-    </pre>
   </body>
 </html>
