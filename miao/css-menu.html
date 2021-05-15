@@ -120,7 +120,7 @@
                   设置
                   <ul>
                     <li short-key="Ctrl + `">用户设置</li>
-                    <li>工作空间设置</li>
+                    <li short-key="Ctrl+K Ctrl+`">工作空间设置</li>
                     <li>全局设置</li>
                   </ul>
                 </li>
@@ -149,6 +149,86 @@
         <li class="top-itmes">帮助(H)</li>
       </ul>
     </div>
-    123
+    <pre>
+      <code>
+
+      /* 公共部分 */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font: 14px "微软雅黑";
+      }
+      body {
+        background-color: silver;
+      }
+      li {
+        position: relative;
+        list-style: none;
+        padding: 3px 8px;
+      }
+      li:hover {
+        background-color: rgb(0, 0, 0, 0.7);
+      }
+      li:hover > ul > li {
+        visibility: visible;
+        transition: height 0.35s ease, visibility 0.3s 0.1s;
+        height: 24px;
+      }
+      ul:not(.top-items) {
+        visibility: hidden;
+      }
+      /* 顶部菜单和子菜单 */
+      .menubar {
+        position: relative;
+        width: 100%;
+        min-width: 600px;
+        color: white;
+        user-select: none;
+        background: linear-gradient(to top, rgb(32, 32, 32), #3f3f3f);
+        box-shadow: 3px 3px 3px grey;
+      }
+      .top-items > li {
+        display: inline-block;
+      }
+      .top-items > li:hover {
+        background-color: rgb(255, 255, 255, 0.2);
+      }
+
+      .v-items li {
+        background-color: #222222;
+        min-width: 240px;
+        height: 0px;
+      }
+      .v-items li:hover {
+        background-color: rgb(0, 0, 0, 0.7);
+      }
+      .v-items {
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+
+      /* 横向拉开的菜单 */
+      .l-items > ul {
+        position: absolute;
+        top: 0;
+        left: 100%;
+      }
+      li[short-key]::after {
+        content: attr(short-key);
+        position: absolute;
+        right: 5px;
+        /* height: 24px; */
+        margin-right: 5px;
+      }
+      .l-items::after {
+        content: ">";
+        font-weight: bold;
+        position: absolute;
+        right: 5px;
+      }
+      </code>
+    </pre>
   </body>
 </html>
