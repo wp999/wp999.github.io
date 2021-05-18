@@ -1,0 +1,48 @@
+div {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  margin: auto;
+}
+
+span {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  border: 1px solid red;
+}
+
+.d1 {
+  position: relative;
+}
+
+.d3 {
+  position: relative;
+}
+
+.s1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.s2 {
+  margin: 8px 49px 49px 49px;
+}
+
+.s3 {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+.s4{
+  vertical-align:middle;
+}
+.d4{
+  line-height:200px;
+  text-align:center;
+}
