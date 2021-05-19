@@ -1,76 +1,120 @@
-body>*{
-margin:0;
-padding:0;}
- .top{
+body>* {
+  margin: 0;
+  padding: 0;
+}
+
+.top {
   height: 150px;
   width: 150px;
-  font-size:0;
+  font-size: 0;
 }
-#d1 .top>div{
+
+#d1 .top>div {
   height: 50px;
   width: 50px;
-  box-sizing:border-box;
-  border-left:3px solid blue;
-  border-top:3px solid blue;
+  box-sizing: border-box;
+  border-left: 3px solid blue;
+  border-top: 3px solid blue;
   float: left;
   position: relative;
 }
-#d1 .top>div:nth-child(n+7){
-  border-bottom:3px solid blue;
-}
-#d1 .top>div:nth-child(3n+3){
-  border-right:3px solid blue;
+
+#d1 .top>div:nth-child(n+7) {
+  border-bottom: 3px solid blue;
 }
 
-#d1 .top>div:hover::after{
-  position:absolute; 
-  content:'';
-  height:100%;
+#d1 .top>div:nth-child(3n+3) {
+  border-right: 3px solid blue;
+}
+
+#d1 .top>div:hover::after {
+  position: absolute;
+  content: '';
+  height: 100%;
   width: 100%;
   border: 3px solid red;
-  top:-3px;
+  top: -3px;
   left: -3px;
-  z-index:1;
+  z-index: 1;
+
 
 }
+
 /*   ======================*/
 #d2 table {
-height: 150px;
-width: 150px;
-border-collapse:collapse;
+  height: 150px;
+  width: 150px;
+  border-collapse: collapse;
 }
-td{
- border: 3px solid black; 
- position:relative;
+
+td {
+  border: 3px solid black;
+  position: relative;
 }
-td:hover::after{
-  position:absolute; 
-  content:'';
-  height:46px;
+
+td:hover::after {
+  position: absolute;
+  content: '';
+  height: 46px;
   width: 46px;
   border: 3px solid red;
-  top:-3px;
+  top: -3px;
   left: -3px;
 }
+
 /*=======================  */
 #d3>div {
-height: 150px;width:170px;font-size:0; }
-#d3>div>div{
+  height: 150px;
+  width: 170px;
+  font-size: 0;
+}
+
+#d3>div>div {
   position: relative;
   height: 50px;
   width: 50px;
   /* box-sizing:border-box; */
   display: inline-block;
   /* background-color: blue; */
-  border:3px solid blue;
+  border: 3px solid blue;
 }
-#d3>div>div:not(:nth-child(n+7)){
-  border-bottom:3px solid transparent;
-/* margin-bottom:-3px; */
+
+#d3>div>div:not(:nth-child(n+7)) {
+  border-bottom: 3px solid transparent;
+  /* margin-bottom:-3px; */
 }
-#d3>div>div:not(:nth-child(3n+1)){
-/* margin-left:-3px; */
-  border-left:3px solid transparent;
+
+#d3>div>div:not(:nth-child(3n+1)) {
+  /* margin-left:-3px; */
+  border-left: 3px solid transparent;
 }
-#d3>div>div:hover{
-border:3px solid red;}
+
+#d3>div>div:hover {
+  border: 3px solid red;
+}
+
+.type3 {
+  height: 162px;
+  width: 162px;
+  background-color: blue;
+  font-size: 0px;
+}
+
+.type3>div {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  margin: 3px 0px 0px 3px;
+  background-color: white;
+}
+
+.dd:hover::after {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: -3px;
+  left: -3px;
+  border: 3px solid red;
+}
