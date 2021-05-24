@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+      body {
+          padding: 0;
+          margin: 0;
+		      position: static;
+      }
+
+      nav {
+          min-height: 50px;
+          background-color: #F8F8F8;
+      }
+
+      h1 {
+          border-bottom: 1px solid #eee;
+          padding: 15px;
+          font-weight: 500;
+      }
+
+      p {
+          padding-left: 15px;
+      }
+
+      .lead {
+          font-size: 24px;
+      }
+
+      main{
+          margin: auto;
+      }
+      footer>p{
+		      width:50vw ;
+		     margin:auto;
+      }
+      footer{
+		      height: 100px;
+		      width: 100%;
+		      background-color: #F8F8F8;
+		      position: absolute;
+		      bottom:0;
+      }
+
+      code {
+          color: #C7254E;
+          background-color: #F9F2F4;
+      }
+      ul {
+		      padding:0 0 0 40px;
+		      margin:0 auto;
+		      font-size: 0;
+      }
+      li {
+          display: inline-block;
+          list-style-type: none;
+		      padding: 0 15px;
+		      font-size:1rem;
+		      height: 50px;
+		      line-height: 50px;
+		      min-width:50px;
+      }
+      li:hover{background-color: #dedede
+      }
+			@media (max-height:600px ) {
+				footer{
+						position: -webkit-sticky;
+						top:550px;
+				}
+			}
+	</style>
+</head>
+<body>
+<nav>
+	<ul>
+		<li>Project name</li>
+		<li>Home</li>
+		<li>About</li>
+		<li>Concat</li>
+		<li>Dropdown</li>
+	</ul>
+</nav>
+<main>
+	<h1>Sticky footer with fixed navbar</h1>
+	<p class="lead">
+
+		Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A
+		fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body > .container</code>.
+	</p>
+</main>
+<footer>
+<p>
+	Place sticky footer content here.
+</p>
+</footer>
+</body>
+</html>
