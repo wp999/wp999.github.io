@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+      div {
+          margin: 10px;
+          border: 1px solid black;
+          width: 400px;
+          overflow: hidden;
+      }
+
+      main {
+          height: 300px;
+          width: 400px;
+          position: relative;
+      }
+
+      img {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          left: 100%;
+		      transition:left .3s;
+
+      input:nth-child(1):checked ~ main > img:nth-child(1),
+      input:nth-child(2):checked ~ main > img:nth-child(2),
+      input:nth-child(3):checked ~ main > img:nth-child(3)
+      {
+		      left: 0;
+		      z-index: 1;
+      }
+	</style>
+</head>
+<body>
+
+<div>
+	<input type="radio" name="slider_radio">
+	<input type="radio" name="slider_radio">
+	<input type="radio" name="slider_radio">
+	<main>
+		<img src="pics/mountain_water.jpg" alt="ss"><img src="pics/meadow_sky.jpg" alt="ms"><img
+					src="pics/the_setting_sun.jpg" alt="tss">
+	</main>
+</div>
+</body>
+</html>
