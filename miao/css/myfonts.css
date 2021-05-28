@@ -1,0 +1,63 @@
+@font-face {
+    src: url("../fonts/font.woff");
+    font-family: 'myfont';
+}
+
+.mfont{
+    font-family: "myfont";
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mfont-emptycar::before{
+content: '\e60c';
+}
+.mfont-fullcar::before{
+content: '\e60d';
+}
+.mfont-good::before{
+    content: '\e60f';
+}
+.mfont-smile::before{
+   content: '\e60e';
+}
+.mfont-chat::before{
+    content: '\e610';
+}
+.mfont-shortarrowtop::before{
+    content: '\e611';
+}
+.mfont-longarrowtop::before{
+    content: '\e612';
+}
+.mfont-sad::before{
+    content: '\e613';
+}
+.mfont-heart::before{
+    content: '\e614';
+}
+.mfont-circleright::before{
+    content: '\e615';
+}
+.mfont-search::before{
+    content: '\e616';
+}
+.mfont-chatquestionmark::before{
+    content: '\e617';
+}
+.mfont-circleyes::before{
+    content: '\e618';
+}
+.mfont-bigsmile::before{
+    content: '\e619';
+}
+.mfont-twoshowerhead::before{
+    content: '\e620';
+}
+.mfont-shortarrowright::before{
+    content: '\e621';
+}
+.mfont-thinarrowright::before{
+    content: '\e622';
+}
