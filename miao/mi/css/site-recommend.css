@@ -1,0 +1,244 @@
+.fx {
+    display: flex;
+}
+label{
+    cursor:pointer;
+}
+
+/*--------------------------------*/
+.site-recommend-box {
+    height: 670px;
+    position: relative;
+    flex-direction: column;
+}
+
+/*-------------------------------*/
+.carousel-box {
+    position: absolute;
+    width: 1226px;
+    top: 0;
+    left: 0;
+    height: 460px;
+}
+
+.carousel-btn-box {
+    height: 15px;
+    width: 70px;
+    justify-content: space-between;
+    float: right;
+    margin: 428px 35px 0 0;
+}
+
+.carousel-btn-box > input {
+    display: none;
+}
+
+.carousel_btn {
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    border: 2px solid #c2c2c2;
+    z-index: 40;
+    padding: 1px;
+}
+
+.carousel-btn-box > input:checked + label {
+    background: content-box linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.carousel-img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.carousel-img-box > img {
+    height: 100%;
+    width: 100%;
+}
+
+#carousel_btn1:checked ~ .b1 {
+    opacity: 100%;
+}
+
+#carousel_btn2:checked ~ .b2 {
+    opacity: 100%;
+}
+
+#carousel_btn3:checked ~ .b3 {
+    opacity: 100%;
+}
+
+#carousel_btn4:checked ~ .b4 {
+    opacity: 100%;
+}
+
+.carousel-img-box>label:nth-of-type(2){
+    background: -124px  no-repeat url("../pics/icon-slides.png") rgba(0,0,0,0);
+    top: 205px;
+    right: 20px;
+    height: 70px;
+    width: 40px;
+    position: absolute;
+    display: block;
+    z-index: 40;
+}
+.carousel-img-box > label:nth-of-type(2):hover  {
+    background-position: -42px ;
+}
+.carousel-img-box>label:nth-of-type(1){
+    background: -84px no-repeat url("../pics/icon-slides.png") rgba(0,0,0,0);
+    top: 205px;
+    left: 245px;
+    height: 70px;
+    width: 40px;
+    position: absolute;
+    display: block;
+    z-index: 40;
+}
+.carousel-img-box > label:nth-of-type(1):hover  {
+    background-position: 0 ;
+}
+
+
+
+
+/*-------------------------------*/
+.recommend-menu-list-box {
+    height: 460px;
+    position: relative;
+}
+
+.recommend-menu-list {
+    padding: 20px 0;
+    height: 100%;
+    width: 234px;
+    flex-direction: column;
+    background-color: rgba(105, 101, 101, 0.6);
+}
+
+.recommend-menu-item {
+    flex: 1;
+    padding-left: 30px;
+    line-height: 42px;
+    color: #FFF;
+}
+
+.recommend-menu-item:hover > .recommend-menu-item-goods-box {
+    display: flex;
+}
+
+.recommend-menu-item-goods-box {
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    box-shadow: rgba(0, 0, 0, 0.18) 0 8px 16px 0;
+    background-color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 234px;
+    width: 992px;
+    white-space: nowrap;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: none;
+    z-index: 89;
+}
+
+.recommend-menu-item:not(:nth-child(1)):not(:nth-child(4)):not(:nth-child(2)) > .recommend-menu-item-goods-box {
+    width: 744px;
+}
+
+.recommend-menu-item-goods {
+    padding: 18px 20px;
+    height: 76px;
+    width: 248px;
+}
+
+.recommend-menu-item-goods:hover > span {
+    color: #FF6700;
+}
+
+.recommend-menu-item-goods > img, .recommend-menu-item-goods > span {
+    cursor: pointer;
+}
+
+.recommend-menu-item-goods > img {
+    height: 40px;
+    width: 40px;
+    margin-right: 12px;
+}
+
+.recommend-menu-item:hover {
+    background-color: #FF6700;
+}
+
+.recommend-menu-item::after {
+    content: '';
+    margin-top: 16px;
+    margin-right: 25px;
+    float: right;
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid rgb(224, 224, 224);
+    border-right: 3px solid rgb(224, 224, 224);
+    transform: rotate(45deg);
+}
+
+/*----------------------------*/
+.recommend-four-box {
+    height: 170px;
+    margin-top: 14px;
+}
+
+.recommend-four-box > div:nth-child(n+2) {
+    flex: 1;
+    margin-left: 14px;
+}
+
+.recommend-four-box > div:nth-child(n+2) > img {
+    height: 100%;
+    width: 100%;
+}
+
+.recommend-four-box > div:hover {
+    box-shadow: 0 15px 30px rgb(0, 0, 0, 0.1);
+    transition: box-shadow .2s;
+}
+
+/*------------------------------*/
+.some-services-box {
+    width: 234px;
+    flex-wrap: wrap;
+    background-color: #5F5750;
+}
+
+.services {
+    width: 33.33%;
+    height: 82px;
+    text-align: center;
+    border-top: 1px solid rgb(102, 94, 87);
+    border-left: 1px solid rgb(102, 94, 87);
+}
+
+.services a:hover {
+    color: white;
+}
+
+.services a {
+    color: rgb(201, 198, 196);
+}
+
+.services img {
+    margin: 20px auto 5px;
+    display: block;
+    height: 24px;
+    width: 24px;
+}
+
+/*--------------------------*/

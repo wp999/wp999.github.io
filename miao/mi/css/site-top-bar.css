@@ -1,0 +1,141 @@
+.site-top-bar {
+    background-color: #333;
+    height: 40px;
+    width: 100%;
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+.container {
+    width: 1226px;
+    /*height: 100%;*/
+    margin-left: auto;
+    margin-right:auto
+}
+
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 810px;
+    display: inline-block;
+
+}
+
+.list li {
+    display: inline-block;
+    height: 100%;
+    line-height: 40px;
+}
+
+.list a {
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.list a:hover {
+    color: white;
+}
+
+.list[right] {
+    float: right;
+    width: 140px;
+}
+
+.sep {
+    margin: 0 .33rem;
+    color: #424242;
+}
+
+.shop-car-btn {
+    background-color: #FF6700;
+    color: white;
+    float: right;
+    display: inline-block;
+    height: 100%;
+    width: 120px;
+    line-height: 4rem;
+    z-index: 99;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 2px 2px 1px  rgba(255, 103, 0, 0.2);
+}
+.shop-car-btn>i{
+    font-size: 1.2em;
+}
+
+
+
+.shop-car {
+    right: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+    background-color: white;
+    position: absolute;
+    width: 360px;
+    height: 0;
+    overflow: hidden;
+    transition: padding .5s, height .5s;
+}
+.shop-car-btn:hover{
+    background-color: #FFF;
+    color: #FF6700;
+}
+.shop-car-btn:hover > .shop-car {
+    height: 360px;
+    padding: 20px;
+}
+
+.car-item:not(:nth-of-type(1)) {
+    border-top: 1px solid #eee;
+}
+
+.car-item {
+    height: 80px;
+    display: flex;
+    color: grey;
+}
+
+.car-item-picture {
+    width: 80px;
+    background: 0 0 /contain no-repeat url("https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1619518635.23124193.png?width=60&height=60");
+
+}
+
+.car-item-name {
+    width: 160px;
+    line-height: 3;
+}
+
+.car-item-info {
+    width: 80px;
+    line-height: 8;
+}
+.car-total{
+    display: flex;
+    height: 80px;
+}
+.car-total-item{
+    text-align: left;
+    padding-left: 20px;
+    color: #3f3f3f;
+    flex:1;
+    background-color: #fafafa;
+}
+.total-count{
+    font-size: 3rem;
+    color: #FF6700;
+}
+
+.car-total-submit{
+   display: inline-block;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 60px;
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    background-color: #FF6700;
+    color: white;
+}

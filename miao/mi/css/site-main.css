@@ -1,0 +1,370 @@
+.site-main {
+    background-color: #F5F5F5;
+    width: 100%;
+    padding: 4px 0 12px;
+}
+
+.goods-card {
+    margin: 0 0 14px 14px;
+    height: 300px;
+    padding: 20px 0;
+    width: 234px;
+    text-align: center;
+    background-color: #FAFAFA;
+    border: 1px solid #eee;
+    transition: all .2s;
+}
+
+.no-margin {
+    margin: 0;
+    padding: 0;
+}
+
+.card-float {
+    transition: all .2s;
+}
+
+.area-box .goods-card:hover, .card-float:hover {
+    transform: translate(0, -3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/*---------------------------------------*/
+.g-c-big {
+    height: 614px;
+}
+
+.goods-card img {
+    height: 100%;
+    width: 100%;
+}
+
+.goods-card > div:nth-child(1) {
+    margin: 10px 0 0 37px;
+    height: 160px;
+    width: 160px;
+}
+
+.goods-card > div:nth-child(2) {
+    height: 18px;
+    font-size: 1.4rem;
+    color: #212121;
+    margin: 25px 10px 0;
+}
+
+.goods-card > div:nth-child(3) {
+    height: 18px;
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    margin: 5px 10px 18px;
+}
+
+.goods-card > div:nth-child(4) {
+    font-size: 1.4rem;
+    color: #FF6700;
+}
+
+.goods-card > div:first-child:last-child {
+    height: 100%;
+    width: 100%;
+}
+
+.small {
+    height: 143px;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    align-content: space-around;
+}
+
+.goods-card.small > div {
+    margin: 0;
+}
+
+.small > div:nth-child(1) {
+    height: 80px;
+    width: 80px;
+}
+
+.small > div:nth-child(n+2) {
+    height: 40px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small > div:nth-child(3) {
+    color: #FF6700;
+}
+
+/*-----------------------------------*/
+.banner-box {
+    height: 120px;
+    width: 100%;
+    margin: 22px 0;
+}
+
+.banner-box > img {
+    height: 100%;
+    width: 100%;
+}
+
+/*--------------------------*/
+.area-box {
+    width: 100%;
+    flex-direction: column;
+}
+
+.area-header {
+    font-size: 2.2rem;
+    color: #333333;
+    line-height: 58px;
+    height: 58px;
+}
+
+.area-header-title {
+    flex: 1;
+    font-weight: 100;
+}
+
+.area-header-option {
+    flex: 1;
+    justify-content: flex-end;
+    font-size: 1.6rem;
+    transition: color .3s;
+}
+
+.area-header-option > * {
+    cursor: pointer;
+    margin: 0 5px 0 15px;
+}
+
+.area-header-option > *:hover {
+    color: #FF6700;
+    border-bottom-color: #FF6700;
+}
+
+.area-content {
+    height: 628px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*------------------小米秒杀--------------------*/
+
+.a-box1 .area-header-option {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.a-box1 .area-header-option > label {
+    height: 24px;
+    width: 36px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.a-box1 .area-header-option > label:hover {
+    color: #FF6700;
+}
+
+.a-box1 .area-header-option > input:checked + label {
+    pointer-events: none;
+    background-color: grey;
+}
+
+.ms-countdown {
+    border-top: 1px solid red;
+    background-color: #F1EDED;
+    height: 340px;
+    width: 234px;
+    text-align: center;
+    padding: 39px 0 0;
+}
+
+.ms-countdown > div {
+    margin: 20px 0;
+}
+
+.clock {
+    justify-content: center;
+    font-size: 2.4rem;
+}
+
+.clock > div {
+    color: white;
+    line-height: 46px;
+    background-color: #605751;
+    height: 46px;
+    width: 46px;
+}
+
+.cd-title {
+    font-size: 2.1rem;
+    color: red;
+}
+
+.hint {
+    font-size: 1.4rem;
+    color: grey;
+}
+
+.ms-list {
+    margin-left: 14px;
+    height: 340px;
+    flex: 1;
+    width: 978px;
+}
+
+del {
+    color: #b0b0b0;
+}
+
+.ms-list > div {
+    flex: 1;
+    height: 340px;
+    margin-right: 15px;
+}
+
+
+/*------------------------------------------*/
+.videos-content {
+    height: 299px;
+    width: 1240px;
+}
+
+.videos-content > div {
+    height: 285px;
+    width: 296px;
+    margin: 0 0 14px 14px;
+    background-color: #FFF;
+    position: relative;
+}
+
+.videos-content > div:first-child {
+    margin-left: 0;
+}
+
+.videos-content > div > div:first-child {
+    height: 180px;
+    width: 296px;
+}
+
+.videos-content > div > div:first-child > img {
+    height: 100%;
+    width: 100%;
+}
+
+.videos-content > div > div:last-child {
+    text-align: center;
+}
+
+.videos-content > div > div:first-child > span {
+    position: absolute;
+    top: 147px;
+    left: 20px;
+    height: 24px;
+    width: 36px;
+    border-radius: 12px;
+    border: 2px solid #FFF;
+    text-align: center;
+    color: #FFF;
+    font-size: 28px;
+    line-height: 22px;
+}
+
+.videos-content > div > div:first-child:hover > span {
+    background-color: #FF6700;
+    border-color: #FF6700;
+}
+
+/*------------------------------------------*/
+.site-footer {
+    height: 500px;
+}
+
+.footer-service > ul {
+    text-align: center;
+    font-size: 1.6rem;
+    list-style-type: none;
+}
+
+.footer-service > ul > li i {
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.footer-service > ul > li > a {
+    padding: 27px 0 27px;
+    height: 25px;
+}
+
+.footer-service > ul > li {
+    border-bottom: 1px solid #e0e0e0;
+    display: block;
+    float: left;
+    line-height: 80px;
+    width: 243px;
+}
+
+.footer-service > ul > li:nth-child(n+2) {
+    border-left: 1px solid #e0e0e0;
+
+}
+
+/*------------------------------------*/
+aside {
+    position: fixed;
+    height: 476px;
+    background-color: #FFF;
+    width: 84px;
+    flex-direction: column;
+    top: 666px;
+    right: 0;
+}
+
+aside > div {
+    flex: 1;
+    border: 1px solid #eee;
+    text-align: center;
+}
+aside>div:first-child{
+    position: relative;
+}
+aside>div:first-child>.qrcode-box{
+    height: 190px;
+    top: 0;
+    left: -140px;
+    width: 130px;
+    padding: 14px;
+    position: absolute;
+    background-color: #FFF;
+    border: 1px solid #eee;
+    display: none;
+}
+.qrcode-box::after{
+    content:'';
+    position: absolute;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    height: 20px;
+    width: 20px;
+    transform: rotate(-45deg);
+    top: 20px;
+    right: -10px;
+    background-color: #FFF;
+}
+.qrcode-box>img{
+    height: 70%;
+    width: 100%;
+}
+
+aside>div:first-child:hover>.qrcode-box{
+   display: block;
+}
+aside>div:last-child>a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
