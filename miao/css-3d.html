@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		div{
+				height: 300px;
+				width: 300px;
+				border: 1px solid black;
+				position: absolute;
+				font-size: 50px;
+				font-weight: bold;
+				box-shadow: 0 0 0px 50px rgb(0,0,0);
+		}
+
+		main{
+				position: relative;
+        /*transform: perspective(300px);*/
+        /*perspective:1000px;*/
+        background-color: transparent;
+				width: 300px;
+				height: 300px;
+				margin: 500px auto;
+				transform-style: preserve-3d;
+				animation: rotate1 10s linear infinite ;
+        /*transform: perspective(300px);*/
+
+		}
+		div:nth-child(2){
+				transform: translate3d(150px,0,150px) rotateY(90deg);
+		}
+		div:nth-child(3){
+				transform: translate3d(-150px,0,150px)rotateY(90deg);
+		}
+		div:nth-child(4){
+				transform: translateZ(300px);
+		}
+		body{
+				perspective: 1000px;
+		}
+		@keyframes rotate1 {
+				from{transform: rotate3d(0,0,0,0)}
+        to{transform: rotate3d(150,150,150,360deg)}
+    }
+	</style>
+</head>
+<body>
+<main>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+</main>
+</body>
+</html>
