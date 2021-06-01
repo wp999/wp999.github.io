@@ -7,45 +7,70 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 	<style>
-		div{
-				height: 300px;
-				width: 300px;
-				border: 1px solid black;
-				position: absolute;
-				font-size: 50px;
-				font-weight: bold;
-				box-shadow: 0 0 0px 50px rgb(0,0,0);
-		}
+      main {
+          height: 200px;
+          width: 200px;
+          margin: 500px auto;
+          position: relative;
+          transform-style: preserve-3d;
+          transform: rotate3d(1, 1, 1, 45deg);
+          background-color: white;
+          border: 1px solid black;
+          /*animation: roll 30s infinite linear alternate;*/
+          box-shadow: 0  0 0 50px rgba(0,0,0,.5);
+      }
 
-		main{
-				position: relative;
-        /*transform: perspective(300px);*/
-        /*perspective:1000px;*/
-        background-color: transparent;
-				width: 300px;
-				height: 300px;
-				margin: 500px auto;
-				transform-style: preserve-3d;
-				animation: rotate1 10s linear infinite ;
-        /*transform: perspective(300px);*/
+      @keyframes roll {
+          to {
+              transform: rotatez(5555deg) rotateX(3333deg) rotateY(4444deg);
+          }
 
-		}
-		div:nth-child(2){
-				transform: translate3d(150px,0,150px) rotateY(90deg);
-		}
-		div:nth-child(3){
-				transform: translate3d(-150px,0,150px)rotateY(90deg);
-		}
-		div:nth-child(4){
-				transform: translateZ(300px);
-		}
-		body{
-				perspective: 1000px;
-		}
-		@keyframes rotate1 {
-				from{transform: rotate3d(0,0,0,0)}
-        to{transform: rotate3d(150,150,150,360deg)}
-    }
+      }
+
+      main:hover{
+          animation: roll 30s infinite linear alternate;
+      }
+
+      main > div {
+          height: 100%;
+          width: 100%;
+          border: 2px solid #FFF ;
+          position: absolute;
+          top: 0;
+          font-size: 100px;
+          line-height: 200px;
+          background-color: black;
+          color: #fff;
+          text-align: center;
+      }
+
+      main > div {
+          left: 0;
+      }
+
+      main > div:nth-child(1) {
+          transform: rotateY(90deg) translateZ(100px);
+      }
+
+      main > div:nth-child(2) {
+          transform: rotateY(-90deg) translateZ(100px);
+      }
+
+      main > div:nth-child(3) {
+          transform: rotatex(-90deg) translateZ(100px);
+      }
+
+      main > div:nth-child(4) {
+          transform: rotatex(90deg) translateZ(100px);
+      }
+
+      main > div:nth-child(5) {
+          transform: translateZ(100px);
+      }
+      main > div:nth-child(6) {
+          transform: translateZ(-100px);
+      }
+
 	</style>
 </head>
 <body>
@@ -54,6 +79,8 @@
 	<div>2</div>
 	<div>3</div>
 	<div>4</div>
+	<div>5</div>
+	<div>6</div>
 </main>
 </body>
 </html>

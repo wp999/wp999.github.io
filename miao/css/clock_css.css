@@ -1,0 +1,216 @@
+pre{
+    font-size: 40px;
+}
+
+.main {
+    height: 500px;
+    width: 500px;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin: 100px auto;
+    position: relative;
+}
+
+.main > .bg > div {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    height: 250px;
+    font-size: 40px;
+    transform-origin: center bottom;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+[class^="d"] > span {
+    position: absolute;
+    left: -22px;
+}
+
+.d1 {
+    transform: rotate(30deg);
+}
+
+.d1 > span {
+    transform: rotate(-30deg);
+}
+
+.d2 {
+    transform: rotate(60deg);
+}
+
+.d2 > span {
+    transform: rotate(-60deg);
+}
+
+.d3 {
+    transform: rotate(90deg);
+}
+
+.d3 > span {
+    transform: rotate(-90deg);
+}
+
+.d4 {
+    transform: rotate(120deg);
+}
+
+.d4 > span {
+    transform: rotate(-120deg);
+}
+
+.d6 {
+    transform: rotate(180deg);
+}
+
+.d6 > span {
+    transform: rotate(-180deg);
+}
+
+.d5 {
+    transform: rotate(150deg);
+}
+
+.d5 > span {
+    transform: rotate(-150deg);
+}
+
+.d7 {
+    transform: rotate(-150deg);
+}
+
+.d7 > span {
+    transform: rotate(150deg);
+}
+
+.d8 {
+    transform: rotate(-120deg);
+}
+
+.d8 > span {
+    transform: rotate(120deg);
+}
+
+.d9 {
+    transform: rotate(-90deg);
+}
+
+.d9 > span {
+    transform: rotate(90deg);
+}
+
+.d10 {
+    transform: rotate(-60deg);
+}
+
+.d10 > span {
+    transform: rotate(60deg);
+}
+
+.d11 {
+    transform: rotate(-30deg);
+}
+
+.d11 > span {
+    transform: rotate(30deg);
+}
+
+.center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #000;
+    margin: auto;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/*------------------------------------------------------*/
+[class*="-needle-box"] {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.needle {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    transform-origin: bottom center;
+
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.second {
+    z-index: 999;
+    height: 250px;
+    width: 4px;
+    background-color: red;
+    position: absolute;
+    left: 248px;
+    top: 30px;
+    animation: rebound 1s  infinite;
+}
+
+.minute {
+    z-index: 998;
+    height: 200px;
+    width: 8px;
+    background-color: black;
+    position: absolute;
+    left: 246px;
+    top: 50px;
+}
+
+.hour {
+    z-index: 997;
+    height: 170px;
+    width: 12px;
+    background-color: black;
+    position: absolute;
+    left: 244px;
+    top: 80px;
+}
+
+
+.second-needle-box {
+    animation: round 60s steps(60)   infinite;
+}
+.minute-needle-box{
+    animation: round 3600s  linear infinite ;
+}
+.hour-needle-box{
+    animation: round 43200s linear infinite;
+}
+
+/*-------------------------------*/
+@keyframes rebound {
+    0% {
+        transform: rotate(0);
+    }
+    5%{
+
+        transform: rotate(2deg);
+    }
+    15%{
+        transform: rotate(-1deg);
+    }
+    20%{
+
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes round {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
