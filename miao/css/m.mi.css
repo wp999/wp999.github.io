@@ -1,0 +1,233 @@
+html {
+  font-size: calc(100vw / 720 * 100);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.top-bar {
+  height: 1.41rem;
+  color: #747474;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: normal;
+      align-content: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #f2f2f2;
+}
+
+.top-bar > .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: normal;
+      align-content: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 1rem;
+}
+
+.top-bar > .logo > img {
+  width: 0.48rem;
+  height: 0.3158rem;
+}
+
+.top-bar > .search-box {
+  height: 0.84rem;
+  width: 5.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.top-bar > .search-box > img {
+  height: 0.6rem;
+  width: 0.6rem;
+}
+
+.top-bar > .search-box > input {
+  height: 0.6rem;
+  padding: 0;
+  border: 1px solid #eee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  outline: none;
+  font-size: 0.3rem;
+  color: #0000004d;
+}
+
+.top-bar > .me {
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: normal;
+      align-content: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  height: 0.84rem;
+}
+
+.top-bar > .me > img {
+  height: 0.6rem;
+  width: 0.6rem;
+}
+
+.top-bar > .u1 {
+  padding: 0;
+  margin: 0;
+  width: 7.2rem;
+  font-size: 0.25rem;
+  list-style-type: none;
+}
+
+.top-bar > .u1 > .l1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: normal;
+      align-content: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  text-align: center;
+  height: 0.57rem;
+  float: left;
+  width: 1.2rem;
+}
+
+.top-bar > .u1 > .l1 > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content {
+  width: 7.2rem;
+}
+
+.content > .carousel {
+  height: 3.6rem;
+  background: 0 0/cover no-repeat url(../pics/koreangirl.jpg);
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: normal;
+      align-content: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-size: 0.3rem;
+  height: 0.75rem;
+  width: 7.2rem;
+  position: fixed;
+  top: calc(100vh - 0.75rem);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(40%, transparent), color-stop(50%, rgba(128, 128, 128, 0.247)), color-stop(0, #fff));
+  background-image: linear-gradient(transparent 0, transparent 40%, rgba(128, 128, 128, 0.247) 50%, #fff 0);
+}
+
+footer > ul {
+  padding: 0;
+  margin: 0;
+}
+
+footer > ul > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: normal;
+      align-content: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  text-align: center;
+  height: 0.57rem;
+  float: left;
+  width: 1.2rem;
+}
+
+footer > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+/*# sourceMappingURL=m.mi.css.map */
