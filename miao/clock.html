@@ -1,111 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/clock_css.css">
-</head>
-<body>
-<pre><code>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/clock_css.css" />
+  </head>
+  <body>
+    <pre><code>
 	哦喂! 三点几了,饮茶先啦 !!
+	<br>
 </code></pre>
-<div>
-	<div class="main">
-		<div class="bg">
-			<div class="d1"><span>I</span></div>
-			<div class="d2"><span>II</span></div>
-			<div class="d3"><span>III</span></div>
-			<div class="d4"><span>IV</span></div>
-			<div class="d5"><span>V</span></div>
-			<div class="d6"><span>VI</span></div>
-			<div class="d7"><span>VII</span></div>
-			<div class="d8"><span>VIII</span></div>
-			<div class="d9"><span>IX</span></div>
-			<div class="d10"><span>X</span></div>
-			<div class="d11"><span>XI</span></div>
-			<div class="d12"><span>XII</span></div>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-			<main class="scale">|</main>
-		</div>
-		<!--		------------------------------------------------------------------>
-		<div class="box hour-needle-box">
-			<div class="hour needle"></div>
-		</div>
-		<div class="box minute-needle-box">
-			<div class="needle minute"></div>
-		</div>
-		<div class="box second-needle-box">
-			<div class="second needle"></div>
-		</div>
-		<div class="center "></div>
-	</div>
-</div>
-<script>
-		for( let xx of document.getElementsByClassName('box')){
-            xx.style.animationDelay = "-"+new Date().toString().split(" ")[4].split(":").reduce((e, i) => 60 * e + Number(i))+"s"
-		}
-
-</script>
-</body>
+    <div>
+      <div class="main">
+        <div class="bg">
+          <div class="d1"><span>I</span></div>
+          <div class="d2"><span>II</span></div>
+          <div class="d3"><span>III</span></div>
+          <div class="d4"><span>IV</span></div>
+          <div class="d5"><span>V</span></div>
+          <div class="d6"><span>VI</span></div>
+          <div class="d7"><span>VII</span></div>
+          <div class="d8"><span>VIII</span></div>
+          <div class="d9"><span>IX</span></div>
+          <div class="d10"><span>X</span></div>
+          <div class="d11"><span>XI</span></div>
+          <div class="d12"><span>XII</span></div>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+          <main class="scale">|</main>
+        </div>
+        <!--		------------------------------------------------------------------>
+        <div class="box hour-needle-box">
+          <div class="hour needle"></div>
+        </div>
+        <div class="box minute-needle-box">
+          <div class="needle minute"></div>
+        </div>
+        <div class="box second-needle-box">
+          <div class="second needle"></div>
+        </div>
+        <div class="center"></div>
+      </div>
+    </div>
+    <script>
+       for (let xx of document.getElementsByClassName("box")) {
+         xx.style.animationDelay =
+          "-" +
+           new Date()
+             .toString()
+             .split(" ")[4]
+             .split(":")
+             .reduce((e, i) => 60 * e + Number(i)) +
+           "s";
+       }
+    </script>
+  </body>
 </html>
