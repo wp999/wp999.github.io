@@ -14,12 +14,12 @@
     let n1 = +prompt('输入第一个数')
     let n2 = +prompt('输入第二个数')
     let n3 = +prompt('输入第三个数')
-    console.log((n1+n2)/3)
+    console.log((n1+n2)/n3)
 </script>
 <script id="ch0103/04">
     let n1 = +prompt('输入除数')
     let n2 = +prompt('输入被除数')
-    console.log(n1/n2)
+    console.log(Number(n1/n2).toFixed(0))
     console.log(n1%n2)
 </script>
 <script id="ch0103/05">
@@ -30,7 +30,7 @@
 <script id="ch0103/06">
     let n1 = +prompt('输入确诊数')
     let n2 = +prompt('输入死亡数')
-    console.log(Number(n2/n1).toFixed(3))
+    console.log(Number(n2/n1).toFixed(3)+"")
 </script>
 <script id="ch0103/07">
     let a = +prompt('输入a')
@@ -38,7 +38,7 @@
     let c = +prompt('输入c')
     let d = +prompt('输入d')
     let x = +prompt('输入x')
-    console.log(a*Math.pow(x,3)+b*Math.pow(x,2)+c*x+d)
+    console.log((a*Math.pow(x,3)+b*Math.pow(x,2)+c*x+d).toFixed(7))
 </script>
 <script id="ch0103/08">
     let a = +prompt('输入一个华氏度')
@@ -46,7 +46,7 @@
 </script>
 <script id="ch0103/09">
     let r = +prompt('输入半径')
-    console.log(2*r)
+    console.log(Number(2*r).toFixed(4))
     console.log(Number(2*Math.PI*r).toFixed(4))
     console.log(Number(Math.PI*Math.pow(r,2)).toFixed(4))
 </script>
@@ -59,7 +59,7 @@ FIXME
 <script id="ch0103/11">
     let a = +prompt('输入a')
     let b = +prompt('输入b')
-    console.log(Number(a%b).toFixed(2))
+    console.log(Number(a%b).toFixed(4))
 </script>
 <script id="ch0103/12">
     let r = +prompt('输球半径')
@@ -110,7 +110,6 @@ FIXME
     console.log(a1*a2)
 </script>
 <script id="ch0103/20">
-    let a1 = +prompt('输入底数')
     let a2 = +prompt('输入指数')
-    console.log(Math.pow(a1,a2))
+    console.log(Math.pow(2,a2))
 </script>
