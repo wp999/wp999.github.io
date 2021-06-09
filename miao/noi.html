@@ -164,11 +164,13 @@
 	    str+=' 7'
 			flag++
 	}
-  console.log(flag>1?str:num)
+	if(flag===0) console.log('n')
+	if (flag>1) console.log(str)
+	else console.log(num)
 </script>
 <script id="ch0104/10">
     let tmp = +prompt('number1:')
     let tmp2 = +prompt('number2:')
-    if(tmp+tmp2<120) console.log(1)
+    if(tmp<60 || tmp2<60) console.log(1)
     else console.log(0)
 </script>
