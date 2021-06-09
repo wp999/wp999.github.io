@@ -38,7 +38,7 @@
     let b = +prompt('输入b')
     let c = +prompt('输入c')
     let d = +prompt('输入d')
-    console.log((a * x**3 + b * x**2 + c * x + d).toFixed(7))
+    console.log((a * x ** 3 + b * x ** 2 + c * x + d).toFixed(7))
 </script>
 <script id="ch0103/08">
     let a = +prompt('输入一个华氏度')
@@ -127,50 +127,109 @@
     console.log(tmp % 2 === 0 ? 'even' : 'odd')
 </script>
 <script id="ch0104/04">
-		let tmp = prompt('a character:')
-    console.log(tmp.charCodeAt()%2===0?'NO':'YES')
+    let tmp = prompt('a character:')
+    console.log(tmp.charCodeAt() % 2 === 0 ? 'NO' : 'YES')
 </script>
 <script id="ch0104/05">
     let tmp = +prompt('number1:')
     let tmp2 = +prompt('number2:')
-    console.log(tmp>tmp2?'>':tmp<tmp2?'<':'=')
+    console.log(tmp > tmp2 ? '>' : tmp < tmp2 ? '<' : '=')
 </script>
 <script id="ch0104/06">
     let tmp = +prompt('number1:')
-    console.log(tmp>10?1:0)
+    console.log(tmp > 10 ? 1 : 0)
 </script>
 <script id="ch0104/07">
     let tmp = +prompt('number1:')
     let tmp2 = +prompt('number2:')
-    if(tmp>=10 || tmp2>=20) console.log(1)
+    if (tmp >= 10 || tmp2 >= 20) console.log(1)
     else console.log(0)
 </script>
 <script id="ch0104/08">
     let tmp = +prompt('number1:')
-    if(tmp%3===0 && tmp%5===0) console.log('YES')
+    if (tmp % 3 === 0 && tmp % 5 === 0) console.log('YES')
     else console.log('NO')
 </script>
 <script id="ch0104/09">
-	let str='',flag  = 0,num = +prompt('number1:')
-	if(num%3===0){
-	    str+='3'
-			flag++
-	}
-	if(num%5===0){
-	    str+=flag?' 5':'5'
-			flag++
-	}
-	if(num%7===0){
-	    str+=' 7'
-			flag++
-	}
-	if(flag===0) console.log('n')
-	if (flag>1) console.log(str)
-	else console.log(num)
+    let str = '', flag = 0, num = +prompt('number1:')
+    if (num % 3 === 0) {
+        str += '3'
+        flag++
+    }
+    if (num % 5 === 0) {
+        str += flag ? ' 5' : '5'
+        flag++
+    }
+    if (num % 7 === 0) {
+        str += ' 7'
+        flag++
+    }
+    if (!flag) console.log('n')
+    else if (flag > 1) console.log(str)
+    else console.log(num)
 </script>
 <script id="ch0104/10">
     let tmp = +prompt('number1:')
     let tmp2 = +prompt('number2:')
-    if(tmp<60 || tmp2<60) console.log(1)
+    if (tmp < 60 || tmp2 < 60) console.log(1)
     else console.log(0)
+</script>
+<script id="ch0104/11">
+    let tmp = +prompt('number1:')
+    if (tmp === 2 || tmp === 4 || tmp > 5) console.log('YES')
+    else console.log('NO')
+</script>
+<script id="ch0104/12">
+    let cost = 23 + 27, walk = 1.2, bike = 3.0, tmp = +prompt('number1:')
+    if (tmp / walk === tmp / bike + cost) console.log('All')
+    else if (tmp / walk > tmp / bike + cost) console.log('Bike')
+    else console.log('Walk')
+</script>
+<script id="ch0104/13">
+    let x = +prompt('number:')
+    if (0 <= x < 5) console.log((-x + 2.5).toFixed(3))
+    else if (5 <= x < 10) console.log((2 - 1.5 * (x - 3) * (x - 3)).toFixed(3))
+    else if (10 <= x < 20) console.log((x / 2 - 1.5).toFixed(3))
+</script>
+<script id="ch0104/14">
+    let weight = +prompt('weight:'), expedite = prompt('expedite? y or n'), cost = 0
+    if (weight <= 1000) cost += 8
+    else if (weight > 1000) {
+        cost += Math.ceil((weight - 1000) / 500) * 4 + 8
+    }
+    if (expedite === 'y') cost += 5
+    console.log(cost)
+</script>
+<script id="ch0104/15">
+    let n1 = +prompt('number1:'), n2 = +prompt('number2:'), n3 = +prompt('number3:')
+    console.log(Math.max(n1, n2, n3))
+</script>
+<script id="ch0104/16">
+    let l1 = +prompt('line1:'), l2 = +prompt('line2:'), l3 = +prompt('line3:')
+    if (l1 + l2 > l3 && l2 + l3 > l1 && l3 + l1 > l2) console.log('yes')
+    else console.log('no')
+</script>
+<script id="ch0104/17">
+		let year =+prompt('year:')
+		if(year%400===0||year%4===0&&year%100!==0) console.log('Y')
+		else console.log('N')
+</script>
+<script id="ch0104/18">
+		let x = +prompt('pos x:')	,y=+prompt('pos y:')
+		if(x>1||x<-1||y>1||y<-1) console.log('no')
+		else console.log('yes')
+</script>
+<script id="ch0104/19">
+	let num1 =+prompt('number1:')	,num2=+prompt('number2'),operator=prompt('operator:')
+	if(['*','+','-','/'].includes(operator)){
+      console.log(eval(num1+operator+num2))
+	}else console.log('Invalid operator')
+</script>
+<!--TODO-->
+<script id="ch0104/20">
+
+</script>
+<script id="ch0104/21">
+	let n = +prompt('number n:'),x = +prompt('number x:'),y = +prompt('number y:')
+  console.log(Math.trunc(n-y/x))
 </script>
