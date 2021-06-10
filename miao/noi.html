@@ -289,27 +289,158 @@
         max = max > current ? max : current
         min = min < current ? min : current
     }
-    console.log(max-min)
+    console.log(max - min)
 
 </script>
 <script id="ch0105/07">
+    let days = +prompt(`days:`), gold = 0, silver = 0, copper = 0
+    for (let i = 0; i < days; i++) {
+        gold += +prompt(`day${i + 1} golds`)
+        silver += +prompt(`day${i + 1} silver`)
+        copper += +prompt(`day${i + 1} copper`)
+    }
+    console.log(`${gold} ${silver} ${copper} ${gold + silver + copper}`)
+</script>
+<script id="ch0105/08">
+    let sides = +prompt(`side amount`), total_angle = (sides - 2) * 180
+    for (let i = 1; i < sides; i++) {
+        total_angle -= Number(prompt(`angle${i}:`))
+    }
+    console.log(total_angle)
+</script>
+<script id="ch0105/09">
+    let m = Number(prompt('number m')), n = Number(prompt('number n')), total = 0
+    for (let i = m; i <= n; i++) {
+        if (i % 2 !== 0) total += i
+    }
+    console.log(total)
+</script>
+<script id="ch0105/10">
+    let m = Number(prompt('number m')), n = Number(prompt('number n')), total = 0
+    for (let i = m; i <= n; i++) {
+        if (i % 17 === 0) total += i
+    }
+    console.log(total)
+</script>
+<script id="ch0105/11">
+    let count = Number(prompt('number count')), five = 0, one = 0, ten = 0
+    for (let i = 1; i <= count; i++) {
+        let current = Number(prompt(`number ${i}`))
+        if (current === 1) one++
+        if (current === 10) ten++
+        if (current === 5) five++
+    }
+    console.log(one)
+    console.log(five)
+    console.log(ten)
 
 </script>
-<script id="ch0105/08"></script>
-<script id="ch0105/09"></script>
-<script id="ch0105/10"></script>
-<script id="ch0105/11"></script>
-<script id="ch0105/12"></script>
-<script id="ch0105/13"></script>
-<script id="ch0105/14"></script>
-<script id="ch0105/15"></script>
-<script id="ch0105/16"></script>
-<script id="ch0105/17"></script>
-<script id="ch0105/18"></script>
-<script id="ch0105/19"></script>
-<script id="ch0105/20"></script>
-<script id="ch0105/21"></script>
-<script id="ch0105/22"></script>
+<script id="ch0105/12">
+    let N = +prompt('number N'), m = +prompt('number m'), count = 0
+    for (let i = 0; i < N; i++) {
+        if (+prompt(`number${i}`) === m) count++
+    }
+    console.log(count)
+</script>
+<script id="ch0105/13">
+    let number = +prompt('number:'), exponential = +prompt('exponential:')
+        , factorial = (function pow(num, exp) {
+        if (exp === 1) return num
+        return num * pow(num, exp - 1)
+    })(number, exponential)
+    console.log(factorial)
+</script>
+<script id="ch0105/14">
+    let x = +prompt('base count x'), n = +prompt('yeas n'), rate = 1 / 1000
+    for (let i = 0; i < n; i++) {
+        x *= 1 + rate
+    }
+    console.log(x.toFixed(4))
+</script>
+<script id="ch0105/15">
+    let R = 1 + prompt('R') / 100, M = +prompt('M'), Y = +prompt('Y')
+    for (let i = 0; i < Y; i++) {
+        M *= R
+    }
+    console.log(Math.trunc(M))
+</script>
+<script id="ch0105/16">
+    let N = +prompt('N'), K = 1 + prompt('K') / 100, price = 200, Y = 0, total = 0
+    console.log(N, K, price)
+    while (Y <= 20) {
+        Y++
+        total += N
+        if (total >= price) break
+        price *= K
+    }
+    console.log(Y <= 20 ? Y : 'Impossible')
+</script>
+<script id="ch0105/17">
+    // recurrence
+    let number = +prompt('number:')
+        , result = (function fb(n) {
+        if (n === 0) return 0
+        if (n === 1 || n === 2) return 1
+        else return fb(n - 1) + fb(n - 2)
+    })(number)
+    console.log(result)
+    //loop
+
+</script>
+<script id="ch0105/18">
+    let n = +prompt('number n:'), cocktail = +prompt('cocktail:'), cock_ok = +prompt('cock_ok'),
+        cock_rate = cock_ok / cocktail
+    for (let i = 1; i < n; i++) {
+        let cock_better = +prompt(`cock_better${i}`)
+        let cock_better_ok = +prompt(`cock_better_ok${i}`)
+        let cock_better_rate = cock_better_ok / cock_better
+        let compare = cock_better_rate - cock_rate
+        if (compare > 0.05) console.log('better')
+        else if (compare < -0.05) console.log('worse')
+        else console.log('same')
+    }
+</script>
+<script id="ch0105/19">
+    let count = +prompt('houses'), speed = 50, up_down_cost = 0.5 + 1, all_cost = 0
+    for (let i = 0; i < count; i++) {
+        let x = +prompt(`pos x${i}`), y = +prompt((`pos y${i}`)), peoples = +prompt(`house${i} peoples`)
+        let z = Math.sqrt(x ** 2 + y ** 2)
+        let go_back_cost = (z * 2 / speed + up_down_cost * peoples)
+        all_cost += Math.ceil((go_back_cost))
+    }
+    console.log(all_cost)
+</script>
+<script id="ch0105/20">
+    let height = +prompt('height:')
+    let total = height
+    for (let i = 0; i < 9; i++) {
+        height /= 2
+        total += 2 * height
+    }
+    console.log(total.toFixed(4))
+    console.log((height / 2).toFixed(7))
+
+
+</script>
+<script id="ch0105/21">
+    let number = +prompt('number')
+    let result = ''
+    if (number % 2 !== 0 && number > 1) {
+        result += `${number}*3+1=`
+        number = number * 3 + 1
+        result += number + '\n'
+    }
+    while (number > 1) {
+        result += `${number}/2=`
+        number /= 2
+        result += number + '\n'
+    }
+    result += 'End'
+    console.log(result)
+</script>
+<script id="ch0105/22">
+
+</script>
 <script id="ch0105/23"></script>
 <script id="ch0105/24"></script>
 <script id="ch0105/25"></script>
