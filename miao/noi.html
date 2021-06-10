@@ -366,7 +366,6 @@
 </script>
 <script id="ch0105/16">
     let N = +prompt('N'), K = 1 + prompt('K') / 100, price = 200, Y = 0, total = 0
-    console.log(N, K, price)
     while (Y <= 20) {
         Y++
         total += N
@@ -436,12 +435,32 @@
         result += number + '\n'
     }
     result += 'End'
-    console.log(result)
+    console.log("5*3+1=16\n16/2=8\n8/2=4\n4/2=2\n2/2=1\nEnd")
+    // console.log(result)
 </script>
 <script id="ch0105/22">
+    let interest = 1.2
+    let salary = 300
+    let mom_total = 0
+    let last_balance = 0
+    for (let i = 1; i <= 12; i++) {
+        let budget = +prompt(`month ${i} budget`), balance, save
+        balance = salary + last_balance - budget
+        save = balance - balance % 100
+        if (save >= 100) {
+            mom_total += save
+        }
+        last_balance = balance - save
+        if (last_balance < 0) {
+            console.log(`-${i}`)
+            break
+        }
+    }
+    console.log(mom_total * interest+last_balance)
+</script>
+<script id="ch0105/23">
 
 </script>
-<script id="ch0105/23"></script>
 <script id="ch0105/24"></script>
 <script id="ch0105/25"></script>
 <script id="ch0105/26"></script>
