@@ -480,13 +480,15 @@
     console.log(normal)
 </script>
 <script id="ch0105/25">
-    for (let i = 50;  ; i++) {
-		    if(i){
+    for (let i = 50; ; i++) {
+        let base7 = i.toString(7),
+            base9 = i.toString(9)
+        if (base7.length === 3 && base9.length === 3 && i > 99 && base7.split('').reverse().join('') === base9) {
             console.log(i)
-            console.log()
-            console.log(i)
-				    break
-		    }
+            console.log(base7)
+            console.log(base9)
+            break
+        }
     }
 </script>
 <script id="ch0105/26">
@@ -572,24 +574,142 @@
 <script id="ch0105/34">
     let n = +prompt('n'), result = 0
     for (let i = 1; i <= 5; i++) {
-        let tmp =1
+        let tmp = 1
         for (let j = 1; j <= i; j++) {
-		       tmp*=j
+            tmp *= j
         }
-        result+=tmp
+        result += tmp
     }
     console.log(result)
 </script>
 <script id="ch0105/35">
+    let n = +prompt('n'), result = 1
+    for (let i = 1; i <= n; i++) {
+        let tmp = 1
+        for (let j = i; j >= 1; j--) {
+            tmp *= j
+        }
+        result += 1 / tmp
+    }
+    console.log(result.toFixed(10))
+</script>
+<script id="ch0105/36">
+    let x = +prompt('x'), n = +prompt('n'), result = 1
+    for (let i = 1; i <= n; i++) {
+        result += x ** i
+    }
+    console.log(result.toFixed(2))
+</script>
+<script id="ch0105/37">
+    let M = +prompt('M'), N = +prompt('N'), X = +prompt('X'), stamina = 0
+    while (1) {
+        let usex = M / N + (M % N === 0 ? 0 : 1)
+        X -= usex
+        if (X < 0) break
+        stamina = usex * N
+        if (stamina < M) break
+        N += M % 2
+    }
+    console.log(N)
+</script>
+<script id="ch0105/38">
 
 </script>
-<script id="ch0105/36"></script>
-<script id="ch0105/37"></script>
-<script id="ch0105/38"></script>
-<script id="ch0105/39"></script>
-<script id="ch0105/40"></script>
-<script id="ch0105/41"></script>
-<script id="ch0105/42"></script>
-<script id="ch0105/43"></script>
-<script id="ch0105/44"></script>
-<script id="ch0105/45"></script>
+<script id="ch0105/39">
+    let n = +prompt('n'), result = 0
+    for (let i = 1; i <= n; i++) {
+        if (i % 7 === 0 || (i + '').includes('7')) continue
+        result += i * i
+    }
+    console.log(result)
+</script>
+<script id="ch0105/40">
+    let n = +prompt('n'), count = 0
+    for (let i = 1; i <= n; i++) {
+        let tmp = i
+        while (tmp !== 0) {
+            let tmp2 = tmp % 10
+            if (tmp2 === 1) count++
+            tmp = (tmp - tmp2) / 10
+        }
+    }
+    console.log(count)
+</script>
+<script id="ch0105/41">
+    let L = +prompt('L'), R = +prompt('R'), count = 0
+    for (let i = L; i <= R; i++) {
+        let tmp = i
+        while (tmp !== 0) {
+            let tmp2 = tmp % 10
+            if (tmp2 === 2) count++
+            tmp = (tmp - tmp2) / 10
+        }
+    }
+    console.log(count)
+</script>
+<script id="ch0105/42">
+    let h = +prompt('h'), w = +prompt('w'), char = prompt('char'), empty = +prompt('isEmpty'), result = ''
+    for (let i = 1; i <= h; i++) {
+        let line = ''
+        for (let j = 1; j <= w; j++) {
+            if (!empty && i !== 1 && i !== h && j !== 1 && j !== w) {
+                line += ' '
+                continue
+            }
+            line += char
+        }
+        result += line + '\n'
+    }
+    console.log(result)
+</script>
+<script id="ch0105/43">
+    let p = +prompt('p'), max = -Infinity
+    // 求最小质因数
+    // for (let i = 2; i <= Math.sqrt(p); i++) {
+    //     if (p % i === 0) {
+    //         console.log(i)
+    //         break
+    //     }
+    // }
+    //求最大质因数
+    for (let i = 3; i < p / 2; i++) {
+        if (p % i !== 0) {
+            continue
+        }
+        if (i > max) max = i
+    }
+    console.log(max)
+</script>
+<script id="ch0105/44">
+    let n = +prompt('n'), count = 0, tmp = 0
+    for (let num = 2; num < Infinity && count !== n; num++) {
+        if (num <= 3) {
+            tmp = num
+            count++
+            continue
+        }
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) break
+            else if (i === num-1) {
+                tmp = num
+                count++
+            }
+        }
+    }
+    console.log(tmp)
+
+</script>
+<script id="ch0105/45">
+    let n = +prompt('days'), current_day = 1, current_gold = 1, result = 0, range = 1
+    while (current_day <= n) {
+        result += current_gold * range
+        range = range + 1
+        current_gold = range
+        if (current_day + range > n) {
+            result += current_gold * (n - current_day)
+            break
+        }
+        current_day += range
+    }
+    console.log(result)
+</script>
