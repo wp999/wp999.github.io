@@ -601,19 +601,25 @@
     console.log(result.toFixed(2))
 </script>
 <script id="ch0105/37">
-    let M = +prompt('M'), N = +prompt('N'), X = +prompt('X'), stamina = 0
+    let M = +prompt('M'), //最大体力值
+		    N = +prompt('N'), //当前战斗力
+		    X = +prompt('X'), //剩余能量元素
+		    stamina = 0 //当前体力值
     while (1) {
-        let usex = M / N + (M % N === 0 ? 0 : 1)
+        //将体力填满 ,每个元素恢复战斗力同等的体力, 则使用数量为 体力/战斗力 ,有可能有余数,所以 要判断是否加一
+        let usex = Math.trunc(M / N) + (M % N === 0 ? 0 : 1)
+		    //减掉使用的能量元素,剩余的能量元素重新赋值给x
         X -= usex
+		    //如果x 小于零 说明能量元素是不够的 ,则不能出征
         if (X < 0) break
-        stamina = usex * N
-        if (stamina < M) break
-        N += M % 2
+		    //当雇佣兵的体力值恰好为M时，才可以参加一个为期M天的战斗期,雇佣兵每连续战斗n天，战斗力就会上升1点
+				//可以理解为 一天消耗一点体力,每消耗N点体力,战斗力+1 则使用最大体力 / N 取整 为此次战斗周期所提升的战斗力
+        N += Math.trunc(M/N)
     }
     console.log(N)
 </script>
 <script id="ch0105/38">
-
+<!--TODO-->
 </script>
 <script id="ch0105/39">
     let n = +prompt('n'), result = 0
