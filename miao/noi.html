@@ -502,7 +502,7 @@
     console.log(count)
 </script>
 <script id="ch0105/27">
-    let k = +prompt('?'), total = 0, n = 0
+    let k = +prompt('?'), total = 0, n
     for (let i = 1; ; i++) {
         total += 1 / i
         if (k < total) {
@@ -607,7 +607,7 @@
 		    stamina = 0 //当前体力值
     while (1) {
         //将体力填满 ,每个元素恢复战斗力同等的体力, 则使用数量为 体力/战斗力 ,有可能有余数,所以 要判断是否加一
-        let usex = Math.trunc(M / N) + (M % N === 0 ? 0 : 1)
+        let usex = Math.ceil(M / N)
 		    //减掉使用的能量元素,剩余的能量元素重新赋值给x
         X -= usex
 		    //如果x 小于零 说明能量元素是不够的 ,则不能出征
