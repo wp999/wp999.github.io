@@ -745,33 +745,54 @@
 </script>
 <!--palindrom: 判断一个数是否是回文数字-->
 <script id="palindrom">
-  function palindrom(num) {
-    let len = num.length
-    if (len % 2 === 0) return 'NO'
-    let half = len / 2 + 0.5
-    for (let i = 0, j = len - 1; i < half && j > half; i++, j--) {
-      if (num[i] !== num[j]) return 'NO'
+  // function palindrom(num) {
+  //   let len = num.length
+  //   let half = len / 2 + 0.5
+  //   for (let i = 0, j = len - 1; i < half && j > half; i++, j--) {
+  //     if (num[i] !== num[j]) return 'NO'
+  //   }
+  //   return 'YES'
+  // }
+  function palindorm(n) {
+    let width = Math.floor(Math.log10(n)) + 1
+    for (let i = 1; i <= width / 2; i++) {
+      let j = width - i + 1
+      let a = Math.trunc(n / Math.pow(10, j - 1)) % 10
+      let b = Math.trunc(n / Math.pow(10, i - 1)) % 10
+      if (a !== b) return false
     }
-    return 'YES'
+    return true
   }
 
-  console.log(palindrom(prompt('num')))
+  console.log(palindorm(prompt('num')))
 </script>
 <!--weekday: 输入年份与月份，输出这个月的第一天是周几-->
 <script id="weekday">
   function weekday(year, month) {
     let allDay = 0,
-      isLeap = 0,
-      array = [31, [29, 28], 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+      isLeap = 0
     for (let i = 1; i <= year; i++) {
       if (i % 400 === 0 || (i % 4 === 0 && i % 100 !== 0)) isLeap = 1
       else isLeap = 0
       if (i === year) break
       allDay += isLeap ? 366 : 365
     }
-    for (let i = 0; i < month - 1; i++) {
-      if (i === 1) allDay += array[1][isLeap ? 0 : 1]
-      else allDay += array[i]
+    for (let i = 1; i < month - 1; i++) {
+      switch (i) {
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+          allDay += 30
+          break
+        case 2:
+          allDay += isLeap ? 29 : 28
+          break
+        default:
+          allDay += 31
+      }
+      // if (i === 1) allDay += array[1][isLeap ? 0 : 1]
+      // else allDay += array[i]
     }
     //取模7后加上1,为本月第一天对应的星期数
     return (allDay % 7) + 1
@@ -784,13 +805,14 @@
 <script id="complete-number">
   function completeNumber(num) {
     let sqrt = Math.sqrt(num)
-    let result = 0
-    if (sqrt % 1 === 0 && sqrt !== num) result += sqrt
-    for (let i = 1, j = num - 1; j > sqrt; i++, j--) {
-      if (i < sqrt && num % i === 0) result += i
-      if (num % j === 0) result += j
+    let result = 1
+    if (num % sqrt === 0) result += sqrt
+    for (let i = 2; i < sqrt; i++) {
+      if (num % i === 0) {
+        result += i + num / i
+      }
     }
-    return result === num ? 'YES' : 'NO'
+    return result === num
   }
 
   completeNumber(+prompt('num'))
@@ -799,7 +821,7 @@
 <script id="complete-numbers">
 
   for (let i = 1; i < 10000; i++) {
-    if (completeNumber(i) === 'YES') console.log(i)
+    if (completeNumber(i)) console.log(i)
   }
 </script>
 <!--prime: 判断一个数是否是素数-->
@@ -862,3 +884,23 @@
   console.log(lcfAndLcm(+prompt('n1'), +prompt('n2')))
 </script>
 <!--sqrt: 求一个数的平方根-->
+<script id="sqrt">
+  function sqrt(begin, end, number) {
+    let square_root = (begin + end) / 2
+    if (end - begin < 0.000001)
+      return square_root
+    if (square_root * square_root > number)
+      end = square_root
+    else
+      begin = square_root
+    return sqrt(begin, end, number)
+
+  }
+
+  function f1(num) {
+    return sqrt(0, num, num)
+  }
+
+  let number = +prompt('number')
+  f1(number)
+</script>
