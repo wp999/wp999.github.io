@@ -1,4 +1,4 @@
-var wp999 = new function () {
+var wp999 = new (function () {
   this.chunk = function (arr, num) {
     let len = arr.length
     if (arr.length <= num) return arr.slice()
@@ -24,41 +24,18 @@ var wp999 = new function () {
       []
     )
   }
-  this.difference = function (arr1, arr2) {
-    let set = new Set(arr2)
+  this.difference = function (arr1, ...arr2) {
+    let set = new Set(this.concat(arr2))
     return arr1.filter((e) => !set.has(e))
   }
-  this.differenceBy = function (arr1, arr2, condition) {
-    let flag = typeof condition === 'function'
-    let tmp = new Set(arr2.map((e) => (flag ? condition(e) : e[condition])))
-    return arr1.filter((e) => !tmp.has(flag ? condition(e) : e[condition]))
+  this.flattenDeepth = (arr, i) => {
+    if (i === 0) return arr
+    return arr.reduce((pre, e) => {
+      return pre.concat(Array.isArray(e) ? this.flattenDeepth(e, i - 1) : e)
+    }, [])
   }
-  this.differenceWith = function (arr1, arr2, comparator) {
-    return arr1.filter((e) => arr2.forEach((e2) => comparator(e, e2)))
-  }
-  this.drop = function (arr, num = 1) {
-    return arr.slice(num)
-  }
-  this.dropRight = (arr, num = arr.length - 1) => arr.slice(0, arr.length - num)
-  // this.dropRightWhile = function (arr, predicate) {
-  //   let index = arr.length - 1
-  //   let type = Array.isArray(arr) ? 'array' : typeof predicate
-  //   for (let i = index; i >= 0; i--) {
-  //     if (
-  //       (type === 'array' && arr[i][predicate[0]] === predicate[1]) ||
-  //       (type === 'string' && predicate in arr[i]) ||
-  //       (type === 'function' && predicate(arr[i]))
-  //     ) {
-  //       index = i
-  //       break
-  //     }
-  //   }
-  //   return this.dropRight(arr, index)
-  // }
-  // this.iteratee = function (arr,){
-  //
-  // }
-}
+  this.flatten = (arr) => this.flattenDeepth(arr, 1)
+  this.flattenDeep = (arr) => this.flattenDeepth(arr, Infinity)
+})()
 
-
-// console.log(new wp999().dropRight([1, 2, 3, 4], 3))
+console.log(wp999.flattenDeepth([[1, 2, 3, [[[[[4]]]]],[[3]], [[[5]]], 6, 7, 8], [1, 3], [4, 8], [6]]))
