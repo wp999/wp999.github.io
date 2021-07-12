@@ -1,4 +1,4 @@
-var wp999 = function () {
+var wp999 = new function () {
   this.chunk = function (arr, num) {
     let len = arr.length
     if (arr.length <= num) return arr.slice()
@@ -58,7 +58,7 @@ var wp999 = function () {
   // this.iteratee = function (arr,){
   //
   // }
-  return this
 }
+
 
 // console.log(new wp999().dropRight([1, 2, 3, 4], 3))
