@@ -18,8 +18,9 @@ var wp999 = new (function () {
   this.concat = (arr, ...arrays) => {
     return arr.concat(...arrays)
   }
+  //返回第二个参数
   this.difference = (arr1, ...arr2) => {
-    let set = new Set(this.concat(arr2))
+    let set = new Set(this.concat(...arr2))
     return arr1.filter((e) => !set.has(e))
   }
   this.flattenDeepth = (arr, i) => {
@@ -57,32 +58,4 @@ var wp999 = new (function () {
   }
 })()
 
-/**
- * 输入：([1,2,3])
- 输出：[1]
- 期望：[1,2]
- =================
- 输入：([1,2,3],2)
- 输出/期望：[1]
- =================
- 输入：([1,2,3],5)
- 输出：[1]
- 期望：[]
- =================
- 输入：([1,2,3],0)
- 输出/期望：[1,2,3]
- =================
- 输入：([1,2,3],5)
- 输出：[1]
- 期望：[]
- =================
- 输入：([1,2,3])
- 输出：[1]
- 期望：[1,2]
- */
-console.log(wp999.dropRight([1, 2, 3]))
-// console.log(
-//   wp999.groupBy([1.3, 2.1, 2.4], function (num) {
-//     return Math.floor(num)
-//   })
-// )
+
